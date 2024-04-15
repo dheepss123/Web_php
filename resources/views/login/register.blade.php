@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="p-6 pt-0">
-                    <form method="post" action="{{ route('user.UserRegister') }}" novalidate>
+                    <form method="post" action="{{ route('UserRegister') }}" novalidate>
                         @csrf
                         <div>
                             <div>

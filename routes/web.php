@@ -17,13 +17,14 @@ Route::get('/register', [LoginController::class, 'HalamanRegister'])->name('Hala
 // Get User
 Route::get('/user', [UserController::class, 'User'])->name('User');
 // Show User
-Route::get('/user{user:id}', [UserController::class, 'ShowUser'])->name('ShowUser');
+Route::get('/user{user:id}', [UserController::class, 'ShowUser'])->name('user.ShowUser');
 
 // User Register
 Route::post('/user/store', [UserController::class, 'UserRegister'])->name('UserRegister');
-// User Edit
-Route::get('/user{user:id}/edit', [UserController::class, 'HalamanEditUser'])->name('HalamanEditUser');
-Route::put('/user{user:id}', [UserController::class, 'EditUser'])->name('EditUser');
+// Halaman User Edit
+Route::get('/user{user:id}/edit', [UserController::class, 'HalamanEditUser'])->name('user.HalamanEditUser');
+// Update User
+Route::put('/user/{user:id}', [UserController::class, 'Update'])->name('user.Update');
 // User Delete
-Route::delete('/user{user:id}', [UserController::class, 'DeleteUser'])->name('DeleteUser');
+Route::delete('/user{user:id}', [UserController::class, 'DeleteUser'])->name('user.DeleteUser');
 

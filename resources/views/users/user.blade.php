@@ -24,7 +24,7 @@
                         <td class="px-6 py-4 whitespace-nowrap">{{ $users->email }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ (new \Carbon\Carbon($users->created_at))->format("d F Y") }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="{{ route('ShowUser', $users->id) }}" class="text-indigo-500 hover:text-indigo-800">Show</a>
+                            <a href="{{ route('user.ShowUser', $users->id) }}" class="text-indigo-500 hover:text-indigo-800">Show</a>
                         </td>
                     </tr>
                 @endforeach

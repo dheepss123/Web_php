@@ -30,7 +30,7 @@ class UserController extends Controller
     // Show User
     public function ShowUser(User $user)
     {
-        return view("users.show", [ 
+        return view("users.show", [
             'user' => $user,
         ]);
     }
@@ -41,9 +41,10 @@ class UserController extends Controller
             'user' => $user,
         ]);
     }
-    public function EditUser(UserRequest $request, User $user){
-        $user->update($request->validated());
-        return redirect('/user');
+    public function Update(UserRequest $request, User $user)
+    {
+        $user->update($request-> validated());
+        return redirect('user');
     }
 
     // Delete User
