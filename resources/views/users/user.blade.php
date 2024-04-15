@@ -13,6 +13,7 @@
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created At</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
                 </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
@@ -22,6 +23,9 @@
                         <td class="px-6 py-4 whitespace-nowrap">{{ $users->name }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $users->email }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ (new \Carbon\Carbon($users->created_at))->format("d F Y") }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <a href="{{ route('ShowUser', $users->id) }}" class="text-indigo-500 hover:text-indigo-800">Show</a>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
