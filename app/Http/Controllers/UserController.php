@@ -20,12 +20,7 @@ class UserController extends Controller
 
 
     // User Register
-    public function UserRegister(UserRequest $request)
-    {
-        User::create($request->validated());
-        return redirect('/user');
 
-    }
 
     // Show User
     public function ShowUser(User $user)

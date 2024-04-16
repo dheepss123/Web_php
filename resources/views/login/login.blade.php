@@ -25,7 +25,8 @@
                     </p>
                 </div>
                 <div class="p-6 pt-0">
-                    <form>
+                    <form method="post" action="{{ route('login') }}">
+                        @csrf
                         <div>
                             <div>
                                 <div
@@ -46,6 +47,7 @@
                                            autocomplete="off"
                                            class="block w-full border-0 bg-transparent p-0 text-sm file:my-1 file:rounded-full file:border-0 file:bg-accent file:px-4 file:py-2 file:font-medium placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 sm:leading-7 text-foreground">
                                 </div>
+                                
                             </div>
                         </div>
                         <div class="mt-4">
